@@ -1,0 +1,530 @@
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --primary: #2f80ed;
+  --secondary: #f2f2f2;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f5f5f5;
+  --secondary: #1e1e1e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 40px;
+  height: 40  px;
+  object-fit: contain;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--bg);
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav ul.active {
+    display: flex;
+  }
+
+.nav a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.nav ul li a.active {
+  font-weight: 700; /* bold */
+}
+
+.toggle-btn {
+  border: 1px solid var(--primary);
+  background: none;
+  color: var(--primary);
+  padding: 5px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+section {
+  padding: 100px 30px 60px;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--secondary);
+}
+
+
+.section-judul-utama {
+  padding-top: 100px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.judul-utama-banner {
+  position: relative;
+  min-height: 350px;
+  background: url('../assets/gambar/web/logokatar.png') center no-repeat;
+  background-size: 22em;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* overlay agar teks jelas */
+.judul-utama-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.judul-utama-banner h1,
+.judul-utama-banner p {
+  position: relative;
+  z-index: 1;
+}
+
+.judul-utama-banner h1 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.judul-utama-banner p {
+  font-size: 18px;
+  color: #555;
+}
+
+.section-kegiatan {
+  padding: 30px 20px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.kegiatan-slider {
+  position: relative;
+  max-width: 520px;
+  margin: 35px auto;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slider-track img {
+  width: 100%;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* tombol kiri kanan */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.nav-btn.prev { left: 10px; }
+.nav-btn.next { right: 10px; }
+
+.nav-btn:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+/* indikator */
+.slider-indicator {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.slider-indicator span {
+  width: 18px;
+  height: 4px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 4px;
+}
+
+.slider-indicator span.active {
+  background: #fff;
+  width: 28px;
+}
+
+/* POPUP */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 9999;
+}
+
+.popup.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.popup-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+}
+
+.popup-nav.prev { left: 20px; }
+.popup-nav.next { right: 20px; }
+
+
+.section-berita {
+  padding: 30px 20px 30px;
+  background: #ffffff;
+}
+
+.section-berita .judul-divisi {
+  font-size: 1.9rem;
+    text-align: center;
+}
+
+.section-berita .sub-subjudul-divisi {
+  margin-bottom: 40px;
+  color: #666;
+    text-align: center;
+}
+
+.berita-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.berita-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 18px;
+  padding: 18px;
+  border-radius: 14px;
+  background: #f9f9f9;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+}
+
+.berita-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.berita-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.berita-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.berita-text h3 {
+  font-size: 1rem;
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+.berita-text p {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.berita-text a {
+  font-size: 0.85rem;
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.berita-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 140px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.berita-cta h3 {
+  margin-bottom: 6px;
+  font-size: 1rem;
+  color: black;
+}
+
+.berita-cta p {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+.berita-cta .cta-link {
+  font-size: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.berita-cta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.berita-cta i {
+  font-size: 1.5rem;     /* ukuran panah */
+  color: #000;           /* warna hitam */
+  margin-top: 10px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.badge {
+  align-self: flex-start;
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #e7f0ff;
+  color: #0d6efd;
+  font-weight: 600;
+}
+
+
+@media (max-width: 600px) {
+  .berita-list {
+    grid-template-columns: 1fr;
+  }
+    .berita-item {
+    grid-template-columns: 1fr;
+  }
+
+  .berita-item img {
+    max-height: 180px;
+  }
+
+  .kegiatan-wrapper img {
+    max-width: 100%;
+  }
+}
+
+
+.footer {
+  background-color: #111;
+  color: #eee;
+  margin-top: 80px;
+  font-size: 14px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.footer-section h4 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.footer-section p {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #0d6efd;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .container h1 {
+    font-size: 24px;
+  }
+
+  .section-judul-utama {
+    padding-top: 100px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  .judul-utama-banner {
+    min-height: 240px;
+    background-size: 15em;
+  }
+
+  .judul-utama-banner h1 {
+    font-size: 28px;
+  }
+
+  .judul-utama-banner p {
+    font-size: 15px;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .popup-nav {
+    display: none;
+  }
+
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    background: var(--bg);
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .nav ul.active {
+    display: flex;
+  }
+
+  .nav ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

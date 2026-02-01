@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" href="assets/gambar/web/logokatar.png" type="image/x-icon">
+  <title>Karang Taruna RW 05</title>
+  <link rel="stylesheet" href="style/home.css">
+</head>
+<body>
+  <header>
+  <div class="container">
+    <div class="nav">
+
+      <div class="brand">
+        <img src="assets/gambar/web/logokatar.png" alt="Logo Karang Taruna" class="logo">
+        <h1>Karang Taruna 05</h1>
+      </div>
+
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+      <ul id="menu">
+        <li><a href="index.html" class="active">Beranda</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="struktur.html">Struktur</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+      </ul>
+
+    </div>
+  </div>
+</header>
+
+<!-- SECTION JUDUL UTAMA -->
+<section class="section-judul-utama">
+  <div class="container">
+    <div class="judul-utama-banner">
+      <h1>Karang Taruna RW 05</h1>
+      <p>Bersatu, Berkarya, dan Mengabdi untuk Lingkungan</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section-kegiatan">
+  <div class="container">
+    <h2 class="judul-divisi">Info Kegiatan</h2>
+    <p class="sub-subjudul-divisi">Jadwal & agenda kegiatan Karang Taruna</p>
+
+    <div class="kegiatan-slider">
+
+      <!-- tombol desktop -->
+      <button class="nav-btn prev">&#10094;</button>
+      <button class="nav-btn next">&#10095;</button>
+
+      <div class="slider-track">
+        <img src="assets/gambar/Event/tenis sabtu.jpeg" alt="">
+        <img src="assets/gambar/Event/catur jumat.jpeg" alt="">
+        <img src="assets/gambar/Event/futsal minggu.jpeg" alt="">
+        <img src="assets/gambar/Event/tenis minggu.jpeg" alt="">
+      </div>
+
+      <div class="slider-indicator">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+  <span class="close">&times;</span>
+
+  <!-- tombol popup -->
+  <span class="popup-nav prev">&#10094;</span>
+  <img id="popup-img">
+  <span class="popup-nav next">&#10095;</span>
+</div>
+
+
+
+<section class="section-berita">
+    <div class="container">
+    <h2 class="judul-divisi">Berita Terbaru</h2>
+    <p class="sub-subjudul-divisi">Informasi dan kegiatan terbaru</p>
+
+    <div class="berita-list">
+
+        <a href="berita2.html" class="berita-item">
+        <img src="assets/gambar/Dokumentasi/IMG_7329.jpg" alt="Berita 1">
+        <div class="berita-text">
+            <span class="badge">Berita</span>
+            <h3>Gebyar 17-an Sukses Digelar, Lebih dari 3.000 Warga Hadiri Puncak Perayaan Kemerdekaan</h3>
+            <p>Kegiatan kolaborasi sosial bersama warga sekitar.</p>
+        </div>
+        </a>
+
+        <a href="berita.html" class="berita-item berita-cta">
+        <div class="berita-text">
+            <h3>Lihat Berita Lainnya</h3>
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+        </a>
+
+    </div>
+    </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h4>Kontak</h4>
+      <p>Jl. Serdang Baru Raya, Kel. Serdang,<br>Kec. Kemayoran</p>
+      <p>Email: <a href="mailto:karangtarunarw05serdang@gmail.com">karangtarunarw05serdang@gmail.com</a></p>
+      <p>Telepon: -</p>
+    </div>
+
+    <div class="footer-section">
+  <h4>Ikuti Kami</h4>
+  <ul class="social-list">
+
+    <li>
+      <a href="https://www.instagram.com/katar05serdang" target="_blank">
+    <i class="fa-brands fa-instagram"></i> Instagram
+    </a>
+    </li>
+
+    <li>
+      <a href="#" target="_blank">
+    <i class="fa-brands fa-tiktok"></i> TikTok
+    </a>
+    </li>
+
+    <li>
+      <a href="#" target="_blank">
+        <i class="fa-brands fa-youtube"></i> YouTube
+      </a>
+    </li>
+  </ul>
+</div>
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2026 Karang Taruna Serdang
+  </div>
+</footer>
+
+
+
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+
+/* ==========================
+   ELEMENT
+========================== */
+const slider = document.querySelector(".kegiatan-slider");
+const track = slider.querySelector(".slider-track");
+const images = track.querySelectorAll("img");
+const dots = slider.querySelectorAll(".slider-indicator span");
+
+const prevBtn = slider.querySelector(".nav-btn.prev");
+const nextBtn = slider.querySelector(".nav-btn.next");
+
+const popup = document.getElementById("popup");
+const popupImg = document.getElementById("popup-img");
+const popupPrev = popup.querySelector(".popup-nav.prev");
+const popupNext = popup.querySelector(".popup-nav.next");
+const closeBtn = popup.querySelector(".close");
+
+/* ==========================
+   STATE
+========================== */
+let index = 0;
+let autoSlide;
+let isAnimating = false;   // 🔑 anti glitch
+const interval = 4000;
+const animationTime = 500; // HARUS sama dengan CSS transition
+
+/* ==========================
+   CORE
+========================== */
+function lock() {
+  isAnimating = true;
+  setTimeout(() => isAnimating = false, animationTime);
+}
+
+function updateSlider() {
+  track.style.transform = `translateX(-${index * 100}%)`;
+  dots.forEach((d, i) => d.classList.toggle("active", i === index));
+}
+
+function next() {
+  if (isAnimating) return;
+  lock();
+  index = (index + 1) % images.length;
+  updateSlider();
+}
+
+function prev() {
+  if (isAnimating) return;
+  lock();
+  index = (index - 1 + images.length) % images.length;
+  updateSlider();
+}
+
+function startAuto() {
+  autoSlide = setInterval(() => {
+    if (!isAnimating) next();
+  }, interval);
+}
+
+function stopAuto() {
+  clearInterval(autoSlide);
+}
+
+/* ==========================
+   DESKTOP BUTTON
+========================== */
+prevBtn.onclick = () => {
+  stopAuto();
+  prev();
+  startAuto();
+};
+
+nextBtn.onclick = () => {
+  stopAuto();
+  next();
+  startAuto();
+};
+
+/* ==========================
+   INDICATOR
+========================== */
+dots.forEach((dot, i) => {
+  dot.onclick = () => {
+    if (isAnimating) return;
+    stopAuto();
+    index = i;
+    updateSlider();
+    lock();
+    startAuto();
+  };
+});
+
+/* ==========================
+   MOBILE SWIPE
+========================== */
+let startX = 0;
+let startY = 0;
+let isSwiping = false;
+
+slider.addEventListener("touchstart", e => {
+  startX = e.touches[0].clientX;
+  startY = e.touches[0].clientY;
+  isSwiping = false;
+  stopAuto();
+});
+
+slider.addEventListener("touchmove", e => {
+  const dx = Math.abs(e.touches[0].clientX - startX);
+  const dy = Math.abs(e.touches[0].clientY - startY);
+  if (dx > 10 && dx > dy) isSwiping = true;
+});
+
+slider.addEventListener("touchend", e => {
+  const diff = startX - e.changedTouches[0].clientX;
+
+  if (isSwiping && Math.abs(diff) > 50) {
+    diff > 0 ? next() : prev();
+  } else {
+    const img = e.target.closest("img");
+    if (img) {
+      index = [...images].indexOf(img);
+      popup.classList.add("active");
+      popupImg.src = img.src;
+    }
+  }
+  startAuto();
+});
+
+/* ==========================
+   DESKTOP CLICK → POPUP
+========================== */
+images.forEach((img, i) => {
+  img.onclick = () => {
+    if (window.innerWidth <= 768) return;
+    index = i;
+    popup.classList.add("active");
+    popupImg.src = img.src;
+    stopAuto();
+  };
+});
+
+/* ==========================
+   POPUP NAV
+========================== */
+popupNext.onclick = () => {
+  next();
+  popupImg.src = images[index].src;
+};
+
+popupPrev.onclick = () => {
+  prev();
+  popupImg.src = images[index].src;
+};
+
+/* ==========================
+   POPUP SWIPE
+========================== */
+let popupStartX = 0;
+let popupSwiping = false;
+
+popupImg.addEventListener("touchstart", e => {
+  popupStartX = e.touches[0].clientX;
+  popupSwiping = false;
+});
+
+popupImg.addEventListener("touchmove", e => {
+  if (Math.abs(e.touches[0].clientX - popupStartX) > 10) {
+    popupSwiping = true;
+  }
+});
+
+popupImg.addEventListener("touchend", e => {
+  const diff = popupStartX - e.changedTouches[0].clientX;
+  if (popupSwiping && Math.abs(diff) > 50) {
+    diff > 0 ? next() : prev();
+    popupImg.src = images[index].src;
+  }
+});
+
+/* ==========================
+   CLOSE POPUP
+========================== */
+closeBtn.onclick = () => {
+  popup.classList.remove("active");
+  startAuto();
+};
+
+popup.onclick = e => {
+  if (e.target === popup) {
+    popup.classList.remove("active");
+    startAuto();
+  }
+};
+
+/* ==========================
+   INIT
+========================== */
+updateSlider();
+startAuto();
+</script>
+
+
+
+</body>
+</html>

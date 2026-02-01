@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/gambar/web/logokatar.png" type="image/x-icon">
+  <title>Karang Taruna RW 05</title>
+  <link rel="stylesheet" href="style/galeri.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="nav">
+
+      <div class="brand">
+        <img src="assets/gambar/web/logokatar.png" alt="Logo Karang Taruna" class="logo">
+        <h1>Karang Taruna 05</h1>
+      </div>
+
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+      <ul id="menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="struktur.html">Struktur</a></li>
+        <li><a href="galeri.html" class="active">Galeri</a></li>
+      </ul>
+
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <h2 class="judul-divisi">Galeri Kegiatan</h2>
+  <p class="sub-subjudul-divisi">Dokumentasi kegiatan Karang Taruna</p>
+
+  <div class="gallery-grid">
+    <div class="gallery-img">
+      <img src="https://drive.google.com/thumbnail?id=1Ac-ljp0fSuNv9TK8qJBBYTsS6Y3jL9Be&sz=w2000" onclick="openLightbox(2)">
+    </div>
+
+    <div class="gallery-img">
+      <img src="https://drive.google.com/thumbnail?id=1jawVTlxv3bMU7fkkTieWaaToFIhT-_Ug&sz=w2000" onclick="openLightbox(3)">
+    </div>
+
+    <div class="gallery-img">
+      <img src="https://drive.google.com/thumbnail?id=1_nJwEjTVdPXh_kfymdNfszrFCZ3IscR8&sz=w2000" onclick="openLightbox(4)">
+    </div>
+
+    <div class="gallery-img">
+      <img src="https://drive.google.com/thumbnail?id=1G4BZw_V1VPExtGcmaMVaAG_YmU_lWZkE&sz=w2000" onclick="openLightbox(8)">
+    </div>
+
+    <div class="gallery-img">
+      <img src="https://drive.google.com/thumbnail?id=1Je2oMENdToDuwavZaxkTOaZio-vEMhYV&sz=w2000" onclick="openLightbox(0)">
+    </div>
+
+    <div class="gallery-img">
+      <img src="https://drive.google.com/thumbnail?id=10kvgir5mJBvsLlR0__HWoUXzMqsZ6YIx&sz=w2000" onclick="openLightbox(1)">
+    </div>
+
+    <div class="gallery-img">
+      <img src="https://drive.google.com/thumbnail?id=1J1iH4OuUfkTNY5r07evf_3knU3buHaKe&sz=w2000" onclick="openLightbox(5)">
+    </div>
+
+    <div class="gallery-img">
+      <img src="https://drive.google.com/thumbnail?id=1vHBlp1heKEE5xdkt1W_mPEbgyKp9fz-6&sz=w2000" onclick="openLightbox(6)">
+    </div>
+
+    <div class="gallery-img">
+      <img src="https://drive.google.com/thumbnail?id=1h87C7qOAj2s6beqCAQc_a63-j1AnSCyF&sz=w2000" onclick="openLightbox(7)">
+    </div>
+
+  </div>
+   <div class="drive-btn-wrapper">
+    <a 
+      href="https://drive.google.com/drive/folders/17n2FZAScnEdbpoQFeTSAlxkU5M66zQMv" 
+      target="_blank" 
+      class="drive-btn">
+      📂 Lihat Semua Foto di Google Drive
+    </a>
+  </div>
+</section>
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">×</span>
+
+  <button class="nav prev" onclick="changeImage(-1)">❮</button>
+
+  <img id="lightbox-img" src="" alt="Preview">
+
+  <button class="nav next" onclick="changeImage(1)">❯</button>
+  
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h4>Kontak</h4>
+      <p>Jl. Serdang Baru Raya, Kel. Serdang,<br>Kec. Kemayoran</p>
+      <p>Email: <a href="mailto:karangtarunarw05serdang@gmail.com">karangtarunarw05serdang@gmail.com</a></p>
+      <p>Telepon: -</p>
+    </div>
+
+    <div class="footer-section">
+  <h4>Ikuti Kami</h4>
+  <ul class="social-list">
+
+    <li>
+      <a href="https://www.instagram.com/katar05serdang" target="_blank">
+    <i class="fa-brands fa-instagram"></i> Instagram
+    </a>
+    </li>
+
+    <li>
+      <a href="#" target="_blank">
+    <i class="fa-brands fa-tiktok"></i> TikTok
+    </a>
+    </li>
+
+    <li>
+      <a href="#" target="_blank">
+        <i class="fa-brands fa-youtube"></i> YouTube
+      </a>
+    </li>
+  </ul>
+</div>
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2026 Karang Taruna Serdang
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

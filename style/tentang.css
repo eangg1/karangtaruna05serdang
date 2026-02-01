@@ -1,0 +1,336 @@
+:root {
+  --bg: #f8f9fa;
+  --text: #222;
+  --primary: #2f80ed;
+  --secondary: #f2f2f2;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f5f5f5;
+  --secondary: #1e1e1e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 40px;
+  height: 40  px;
+  object-fit: contain;
+}
+
+
+
+/* ================= HEADER ================= */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--bg);
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+}
+
+main {
+  padding-top: 60px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav ul li a.active {
+  font-weight: 700; /* bold */
+}
+
+.nav ul.active {
+    display: flex;
+  }
+
+.nav a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+/* ================= SECTION (30px SEMUA) ================= */
+.section-tentang,
+.section-visi-misi,
+.section-sponsor,
+.section-kontak {
+  padding: 30px 0;
+}
+
+.section-sponsor {
+  padding-top: 60px;
+  padding-bottom: 0px;
+}
+
+/* Selang-seling background */
+.section-tentang,
+.section-kontak,
+.section-sponsor{
+  background-color: #f8f9fa;
+}
+
+.section-kontak h2 {
+  margin-bottom: 16px;
+}
+
+.section-kontak p {
+  margin-bottom: 14px;
+  line-height: 1;
+}
+
+/* khusus link email biar tetap rapi */
+.section-kontak a {
+  display: inline-block;
+  margin-top: 2px;
+}
+
+.section-visi-misi {
+  background-color: #ffffff;
+}
+
+/* ================= ABOUT ================= */
+.about-image {
+  margin: 25px 0;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ================= GRID ================= */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.list {
+  padding-left: 20px;
+}
+
+.list li {
+  margin-bottom: 10px;
+}
+
+.maps iframe {
+  border-radius: 10px;
+}
+
+/* ================= PENDAFTARAN ================= */
+.section-pendaftaran {
+  padding: 60px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.section-pendaftaran h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.section-pendaftaran .desc {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: #555;
+}
+
+.pendaftaran-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.card-daftar {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-daftar img {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.card-daftar span {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.card-daftar:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+
+/* ================= SPONSOR ================= */
+.section-sponsor {
+  text-align: center;
+}
+
+.sponsor-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.sponsor-grid img {
+  max-width: 320px;
+  max-height: 140px;
+  width: auto;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background-color: #111;
+  color: #eee;
+  margin-top: 80px;
+  font-size: 14px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.footer-section h4 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.footer-section p {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #0d6efd;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .container h1 {
+    font-size: 24px;
+  }
+
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    background: var(--bg);
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+
+  .nav ul.active {
+    display: flex;
+  }
+
+  .nav ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .section-tentang,
+  .section-visi-misi,
+  .section-kontak {
+    padding: 20px 20px;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .sponsor-grid img {
+    max-width: 220px;
+    max-height: 100px;
+  }
+}
