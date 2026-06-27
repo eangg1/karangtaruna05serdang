@@ -36,10 +36,12 @@
   <h2 class="judul-divisi">Struktur Kepengurusan</h2>
 
   <!-- Tab Periode -->
-  <div class="periode-tabs">
-    <button class="periode-tab active" onclick="showPeriode('2025')">Periode 2025</button>
-    <button class="periode-tab" onclick="showPeriode('2026')">Periode 2026</button>
-  </div>
+<div class="periode-dropdown-wrapper">
+  <select class="periode-dropdown" onchange="showPeriode(this.value)">
+    <option value="2025">Periode 2025</option>
+    <option value="2026">Periode 2026</option>
+  </select>
+</div>
 
   <!-- Pelindung -->
    <div id="periode-2025" class="periode-content active">

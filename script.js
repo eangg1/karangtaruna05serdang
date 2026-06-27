@@ -52,8 +52,6 @@ function toggleMenu() {
   });
 
 function showPeriode(tahun) {
-  document.querySelectorAll('.periode-tab').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.periode-content').forEach(c => c.classList.remove('active'));
-  document.querySelector(`[onclick="showPeriode('${tahun}')"]`).classList.add('active');
-  document.getElementById(`periode-${tahun}`).classList.add('active');
+  document.getElementById('periode-' + tahun).classList.add('active');
 }
