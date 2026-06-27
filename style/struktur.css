@@ -24,6 +24,29 @@ body {
   color: var(--text);
 }
 
+.periode-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0 25px;
+}
+.periode-tab {
+  padding: 10px 30px;
+  border: 2px solid #2f80ed;
+  background: transparent;
+  color: #2f80ed;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.periode-tab.active {
+  background: #2f80ed;
+  color: white;
+}
+.periode-content { display: none; }
+.periode-content.active { display: block; }
+
 .brand {
   display: flex;
   align-items: center;
