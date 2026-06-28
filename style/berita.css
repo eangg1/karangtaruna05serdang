@@ -107,7 +107,7 @@ header {
 }
 
 .berita-item:first-child .img-wrap img {
-  height: 420px; /* naikkan sampai kepala tidak terpotong */
+  height: 410px; /* naikkan sampai kepala tidak terpotong */
   object-fit: cover;
   object-position: center top;
 }
