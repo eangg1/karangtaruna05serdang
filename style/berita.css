@@ -107,7 +107,7 @@ header {
 }
 
 .berita-item:first-child .img-wrap img {
-  height: 370px;
+  height: auto;
 }
 
 .berita-item:first-child .berita-text h3 {
