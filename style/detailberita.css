@@ -169,6 +169,250 @@ header {
   text-decoration: underline;
 }
 
+
+/* ===== CARD TIM ===== */
+    .team-section {
+      margin-top: 40px;
+      margin-bottom: 32px;
+    }
+ 
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+ 
+    .team-card {
+      background: #1a1a1a;
+      border-radius: 14px;
+      padding: 20px;
+    }
+ 
+    .team-card-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #888;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+ 
+    .team-card-title i {
+      font-size: 0.85rem;
+    }
+ 
+    .coach-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+ 
+    .coach-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+ 
+    .avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      background: #1e3a5f;
+      color: #5ba3f5;
+    }
+ 
+    .coach-info .coach-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #f0f0f0;
+      margin: 0;
+    }
+ 
+    .coach-info .coach-role {
+      font-size: 0.75rem;
+      color: #888;
+      margin: 2px 0 0;
+    }
+ 
+    .official-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+ 
+    .official-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+ 
+    .official-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      background: #1a3a2a;
+      color: #4caf84;
+    }
+ 
+    .official-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #f0f0f0;
+      margin: 0;
+    }
+ 
+    .match-summary {
+      background: #0f2a18;
+      border: 1px solid #1e4d2b;
+      border-radius: 14px;
+      padding: 20px;
+      margin-top: 16px;
+    }
+ 
+    .match-summary-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #4caf84;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+ 
+    .match-summary-title i { font-size: 0.9rem; }
+ 
+    .match-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+ 
+    .match-stat-item .stat-label {
+      font-size: 0.72rem;
+      color: #666;
+      margin: 0 0 3px;
+    }
+ 
+    .match-stat-item .stat-value {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #4caf84;
+      margin: 0;
+    }
+ 
+    .match-stat-item.full { grid-column: span 2; }
+ 
+    /* ===== CARD PEMAIN ===== */
+    .players-section {
+      margin-top: 16px;
+      margin-bottom: 32px;
+    }
+ 
+    .players-section-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #888;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+ 
+    .players-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+ 
+    .player-card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: background 0.2s;
+    }
+ 
+    .player-card:hover {
+      background: #222;
+    }
+ 
+    .player-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #1c2e4a;
+      color: #5ba3f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+ 
+    .player-avatar.gk  { background: #2a1c1c; color: #e57373; }
+    .player-avatar.def { background: #1c2a1c; color: #66bb6a; }
+    .player-avatar.mid { background: #1c2a3a; color: #5ba3f5; }
+    .player-avatar.fwd { background: #2a2a1c; color: #ffca28; }
+ 
+    .player-info {
+      min-width: 0;
+    }
+ 
+    .player-name {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #f0f0f0;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+ 
+    .player-pos {
+      font-size: 0.72rem;
+      color: #888;
+      margin: 2px 0 0;
+    }
+ 
+    .player-star {
+      margin-left: auto;
+      font-size: 0.7rem;
+      color: #ffca28;
+      flex-shrink: 0;
+    }
+ 
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .team-grid { grid-template-columns: 1fr; }
+      .players-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+ 
+    @media (max-width: 480px) {
+      .players-grid { grid-template-columns: 1fr; }
+    }
+
 /* ===== CARD TIM ===== */
     .team-section {
       margin-top: 40px;
