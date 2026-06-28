@@ -405,7 +405,7 @@ header {
     }
  
     @media (max-width: 480px) {
-      .players-grid { grid-template-columns: repeat(3, 1fr); }
+      .players-grid { grid-template-columns: repeat(2, 1fr); }
       .player-card { padding: 10px 10px; gap: 8px; }
       .player-number { width: 30px; height: 30px; font-size: 0.75rem; }
       .player-name { font-size: 0.78rem; }
