@@ -398,14 +398,18 @@ header {
       gap: 4px;
     }
  
-    /* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
-      .team-grid { grid-template-columns: 2fr; }
-      .players-grid { grid-template-columns: repeat(2, 1fr); }
+      .team-grid { grid-template-columns: 1fr; }
+      .players-grid { grid-template-columns: repeat(3, 1fr); }
     }
  
     @media (max-width: 480px) {
-      .players-grid { grid-template-columns: 2fr; }
+      .players-grid { grid-template-columns: repeat(3, 1fr); }
+      .player-card { padding: 10px 10px; gap: 8px; }
+      .player-number { width: 30px; height: 30px; font-size: 0.75rem; }
+      .player-name { font-size: 0.78rem; }
+      .player-mvp-badge { font-size: 0.58rem; padding: 2px 5px; }
     }
 
 /* ===== CARD TIM ===== */
