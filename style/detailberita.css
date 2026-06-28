@@ -319,7 +319,7 @@ header {
  
     .match-stat-item.full { grid-column: span 2; }
  
-    /* ===== CARD PEMAIN ===== */
+     /* ===== CARD PEMAIN ===== */
     .players-section {
       margin-top: 16px;
       margin-bottom: 32px;
@@ -353,35 +353,29 @@ header {
       transition: background 0.2s;
     }
  
-    .player-card:hover {
-      background: #222;
-    }
+    .player-card:hover { background: #222; }
  
-    .player-avatar {
-      width: 40px;
-      height: 40px;
+    .player-number {
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       background: #1c2e4a;
       color: #5ba3f5;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.72rem;
+      font-size: 0.85rem;
       font-weight: 700;
       flex-shrink: 0;
     }
  
-    .player-avatar.gk  { background: #2a1c1c; color: #e57373; }
-    .player-avatar.def { background: #1c2a1c; color: #66bb6a; }
-    .player-avatar.mid { background: #1c2a3a; color: #5ba3f5; }
-    .player-avatar.fwd { background: #2a2a1c; color: #ffca28; }
- 
-    .player-info {
-      min-width: 0;
+    .player-card.mvp .player-number {
+      background: #2a2200;
+      color: #ffca28;
     }
  
     .player-name {
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       font-weight: 600;
       color: #f0f0f0;
       margin: 0;
@@ -390,17 +384,18 @@ header {
       text-overflow: ellipsis;
     }
  
-    .player-pos {
-      font-size: 0.72rem;
-      color: #888;
-      margin: 2px 0 0;
-    }
- 
-    .player-star {
+    .player-mvp-badge {
       margin-left: auto;
-      font-size: 0.7rem;
+      font-size: 0.65rem;
+      font-weight: 700;
       color: #ffca28;
+      background: #2a2200;
+      border-radius: 20px;
+      padding: 2px 8px;
       flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 4px;
     }
  
     /* ===== RESPONSIVE ===== */
