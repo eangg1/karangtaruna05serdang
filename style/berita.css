@@ -107,7 +107,7 @@ header {
 }
 
 .berita-item:first-child .img-wrap img {
-  height: auto;
+  height: 350px; /* coba antara 300px–400px sesuai selera */
 }
 
 .berita-item:first-child .berita-text h3 {
