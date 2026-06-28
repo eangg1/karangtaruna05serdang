@@ -101,10 +101,23 @@ header {
   margin-bottom: 30px;
 }
 
+/* Hanya card pertama yang full width */
+.berita-item:first-child {
+  grid-column: 1 / -1;
+}
+
+.berita-item:first-child .img-wrap img {
+  height: 280px;
+}
+
+.berita-item:first-child .berita-text h3 {
+  font-size: 20px;
+}
+
 /* ================= BERITA ================= */
 .berita-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* ganti dari auto-fit */
   gap: 24px;
 }
 
@@ -215,6 +228,13 @@ header {
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
+  .berita-list {
+    grid-template-columns: 1fr;
+  }
+  .berita-item:first-child {
+    grid-column: 1;
+  }
+
   .nav ul {
     display: none;
     flex-direction: column;
